@@ -37,9 +37,9 @@ app.get('/api/top', async (req, res) => {
     return b.solded - a.solded
   })
   res.json({
-    code: 0, 
+    code: 0,
 
-    data: newData.slice(0, 5)
+    data: newData.slice(0, 2)
   })
 })
 
