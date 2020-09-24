@@ -31,6 +31,7 @@ handler.on('error', err => {
 })
 
 handler.on('push', event => {
+    console.log('event===>', event)
     if(event.payload.ref === 'refs/heads/init'){
         console.log('Receive push ')
         run_cmd('sh',['./deploy-dev.sh'],function(text){
