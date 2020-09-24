@@ -36,6 +36,7 @@ app.get('/api/top', async (req, res) => {
   newData.sort((a, b) => {
     return b.solded - a.solded
   })
+  console.log('newData==>', newData)
   res.json({
     code: 0,
 
