@@ -2,7 +2,7 @@ const http = require('http')
 const createHandler = require('github-webhook-handler')
 const handler = createHandler({
     path: '/docker_deploy',
-    secret: 'myHashSecret'
+    secret: 'test123456'
 })
 const { spawn } = require('child_process')
 function run_cmd(cmd, args, callback) {
