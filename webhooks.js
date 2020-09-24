@@ -23,7 +23,7 @@ http.createServer((req, res) => {
         res.end('no such location')
     })
 }).listen(7777, () => {
-    console.log('Webhook listen at 7777')
+    console.log('Webhook listen at 7777----')
 })
 
 handler.on('error', err => {
@@ -35,7 +35,7 @@ handler.on('push', event => {
     if(event.payload.ref === 'refs/heads/init'){
         console.log('Receive push ')
         run_cmd('sh',['./deploy-dev.sh'],function(text){
-            console.log(text)
+            console.log( 'text-----', text)
         })
     }
 })
